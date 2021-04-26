@@ -1,3 +1,5 @@
+## 네이버 API 방법 1 (urllib.request)
+
 import os
 import sys
 import urllib.request
@@ -37,7 +39,7 @@ result = jsonArray.get('items')
 print(result)
 
 #파일 써서 json을 csv로 변환
-file = open('items.json','w+')
+file = open('items.json', 'w+')
 file.write(json.dumps(result))
 
 df = pd.read_json('items.json')
